@@ -1,0 +1,353 @@
+.containerr {
+    // max-width: 120rem;
+    margin: 0 auto;
+    padding: 0;
+    box-shadow: 0 2rem 6rem rgba(0,0,0,.3);
+
+    // &:before, &:after {
+    // display: block;
+    // content: none;
+}
+
+
+.main {
+    display:flex;
+    flex-direction: column;
+    // align-items: center;
+}
+
+.section-formation {
+    // background-color: goldenrod;
+}
+
+.section-secteurs {
+    // padding: 3em 0 0 0;
+    // background-color:lightseagreen;
+}
+
+.section-temoignages {
+    padding: 2em 0 0 0;
+    // background-color: tomato;
+}
+
+.section-actualites {
+    padding: 4rem 0 0 0;
+    // background-color: orange;  
+}
+
+.section-socialmedia {
+    padding: 5rem 0 0 0;
+}
+
+.roww {
+    text-align: center;
+}
+
+.card {
+    border-bottom: $line;
+    padding: 7rem 0;
+    margin-bottom: 5rem;
+    width: 82%;
+    height: 60rem;
+
+    display: flex;
+
+    &__item {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+        border-radius: 1rem;
+        margin-right: 2rem;
+        
+        &:last-child {
+            margin-right:0;
+        }
+
+        flex:1 0 100%;
+        display: flex;
+
+        @media only screen and (min-width: $bp-small) {
+            display: block;
+        }
+
+        &-1 {
+            background-image: url(../img/formation1.jpg);
+
+            @media only screen and (min-width: $bp-medium) {
+                flex: 1;
+            }
+        }
+        
+        &-2 {
+            background-image: url(../img/formation2.jpg);
+
+            @media only screen and (min-width: $bp-medium) {
+                flex: 1;
+            }
+        }
+
+        &-3 {
+            background-image: url(../img/formation3.jpg);
+            
+            @media only screen and (min-width: $bp-medium) {
+                flex: 1;
+            }
+        }
+
+        &--figcaption {
+            color: white;
+            font-size: 6rem;
+            font-weight: 600;
+            text-align: left;
+            padding: 5rem;
+            line-height: 1.3;
+
+            position: absolute;
+            top: 18rem;  
+            
+            @media only screen and (min-width: $bp-medium) {
+                line-height: 1.3;
+                top: 21rem; 
+                font-size: 3rem;
+            }
+        }
+    }
+
+    &__photo {
+        width: 100%;
+        display: block;
+        filter: brightness(.6);
+     
+        /*To flip image symetrical*/
+        transform: scaleX(-1);
+
+        @media only screen and (min-width: $bp-medium) {
+            flex: 0 0 33%;
+        }
+    }
+}
+
+.secteurs {
+
+    &__container {
+        height: 50rem;
+        margin-bottom: 5rem;
+    
+        display: flex;
+    }
+
+    &__item {
+        position: relative;
+        border-radius: 1rem;
+        margin-right: 2rem;
+        cursor: pointer;
+        overflow: hidden;
+
+        background-size: cover;
+        background-position: center;
+        // width: auto;
+
+        &:last-child {
+            margin-right:0;
+        }
+
+        flex: 1 0 82%;
+
+        &:hover:before { background: none; }
+
+        &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            top:0;
+            bottom:0;
+            left: 0;
+            right: 0;
+            background: rgba(255,78,80,.6);
+            transition: all .3s linear;
+        }
+        
+        &--figcaption {
+            color: white;
+            font-size: 6rem;
+            font-weight: 600;
+            text-align: center;
+            padding: 5rem;
+            line-height: 1.3;
+
+            position: absolute;
+            top: 40%;
+            @media only screen and (min-width: $bp-medium) {
+                font-size: 3rem;
+            } 
+        }
+
+        &--t1 {
+            background-image: url(../img/filiere1.jpg);
+            @media only screen and (min-width: $bp-small) {
+                flex: 1;
+            }
+        }
+
+        &--t2 {
+            background-image: url(../img/filiere2.jpg);
+            @media only screen and (min-width: $bp-small) {
+                flex: 2;
+            }
+        }
+
+        &--t3 {
+            background-image: url(../img/filiere1.jpg);
+            @media only screen and (min-width: $bp-small) {
+                flex: 2;
+            }
+        }
+
+        &--t4 {
+            background-image: url(../img/filiere2.jpg);
+            @media only screen and (min-width: $bp-small) {
+                flex: 1;
+            }
+        }
+    }
+
+    &__photo {
+        width: 100%;
+        display: block;
+    }
+}
+
+.t2:before { background: rgba(255, 78, 80, 0.6); }
+
+.temoignage__module {
+    background-image: url(../img/testimonial.jpg);
+    background-size: cover;
+    background-position: center;
+    width: auto;
+    // height: 80vh;
+}
+
+.actu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    // @media only screen and (min-width: $bp-medium) {
+    //     flex-direction: row;
+    //     flex-wrap: wrap;
+    //     // width: 110rem;
+    //     width: 72%;
+    // }
+
+    &__item {
+        text-align: center;
+        position: relative;
+        border-radius: 1rem;
+        display: block;
+        margin-bottom: 2rem;
+        
+        background-size: cover;
+        background-position: center;
+
+        width: 96%;
+        min-height: 37rem;
+
+        // @media only screen and (min-width: $bp-medium) {
+        //     margin-right: 2rem;
+        //     min-height: 70rem;
+        //     width: auto;
+        //     flex:1;
+        // }
+
+        &--figcaption {
+            color: white;
+            font-size: 6rem;
+            font-weight: 600;
+            text-align: center;
+            line-height: 1.5;
+
+            // @media only screen and (min-width: $bp-medium) {
+            //     font-size: 4.5rem;
+            // }
+        }
+    }
+
+    &__item1 {
+        background-image: url(../img/actu1.jpg);
+        // @media only screen and (min-width: $bp-medium) {
+        //     flex:1 0 30%;
+        // }
+    }
+
+    &__item2 {
+        background-image: url(../img/actu2.jpg);
+        // @media only screen and (min-width: $bp-medium) {
+        //     flex:1 0 30%;
+        // }
+    }
+
+    &__item3 {
+        background-image: url(../img/actu1.jpg);
+        // @media only screen and (min-width: $bp-medium) {
+        //     flex:1 0 30%;
+        // }
+    }
+
+    &__item4 {
+        background-image: url(../img/actu4.jpg);
+        // @media only screen and (min-width: $bp-medium) {
+        //     flex:1 0 30%;
+        // }
+    }
+
+    &__item5 {
+        background-image: url(../img/actu5.jpg);
+        // @media only screen and (min-width: $bp-medium) {
+        //     flex:2 0 61%;
+        // }
+    }
+}
+
+.form {
+    &__input {
+        font-size: 3rem;
+        //Formların kendi kafasına göre yazı karakterleri ve rengi olur. O yüzden aşağıdakini dememiz gerekir.
+        font-family: inherit;
+        color: $color-grey-light;
+        padding: 2rem 2rem;
+        border-radius: 1rem;
+        background-color: $color-white;
+        border: 3px solid $color-grey-light;
+        //input focus daki 3px border bottom dan dolayı inputun initial state indeki zıplamayı önlemek için
+        // border-bottom: 3px solid transparent;
+        width: 80%;
+        display: inline-block;
+        transition: all .3s;
+
+        outline-color: $color-grey-light;
+
+
+        /* make outline teal instead neon blue  */
+        &:active, &:hover {
+            outline-color: $color-secondary;
+        }
+            /* turn off outline completely */
+        // select:active, select:hover {
+        //     outline: none
+        //}
+
+        // @media only screen and (min-width: $bp-large) {
+        //     width: 30%;
+        // }
+    }
+
+    &:focus {
+        outline: $color-secondary;
+        box-shadow: 0 1rem 2rem rgba($color-black, .1);
+        border-bottom: 3px solid $color-secondary;
+        }
+
+    &:focus:invalid {
+        border-bottom: 3px solid $color-primary;
+    }
+}

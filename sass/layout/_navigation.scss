@@ -1,0 +1,84 @@
+/* START NAVBAR STYLE */
+
+
+#navbar {
+    overflow: hidden;
+    background-color: salmon;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 8rem;
+    // padding: 1.5rem;
+
+    transition: width .5s ease;
+    transform: translateX(-50%);
+    left: 50%;
+    top:5%;
+    position: absolute;
+    // height:7%;
+    width: 80%;
+    height: 6rem;
+    
+    z-index:9;
+    
+    display:flex;
+    justify-content: space-around;
+   
+
+    align-items: center;
+
+    // @media only screen and (min-width:$bp-largest) {
+    //     border-radius: 8rem;
+    //     width: 100%;
+    // }
+}
+
+
+
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 90%;
+}
+  
+.sticky#navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    border-radius: 0px;
+    // background: rgba(255, 255, 255, 1) !important;
+    background-color: seagreen;
+}
+
+.navigation__item {
+    color:#fff;
+    text-decoration: none;
+    cursor: pointer;
+    vertical-align: middle;
+    padding: .6em 1em;
+    line-height: 2;
+    //Hamburger esnasında görünmemesi için
+    // margin-top: -2.2rem;
+    
+    &:last-child {
+        // margin-right: 6rem;
+        padding: 1rem 4.5rem;
+    }
+
+    //en az 900px de 
+    @media only screen and (min-width: 900px) {
+        font-size: 1.3rem;  
+        padding: .6em .5em;
+        line-height: 0;
+  
+    /*Apply text-transform: uppercase; --> excluded the last child (Inscrivez-vous button) <-- :)*/
+        &:not(:last-child) {
+            text-transform: uppercase;
+        }
+    }
+
+    // @media only screen and (min-width: $bp-large) {
+    //     padding: 1rem 1.5rem;
+    // }
+}
+
+/*---  END NAVBAR STYLE ---*/

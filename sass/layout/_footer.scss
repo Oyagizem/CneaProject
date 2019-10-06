@@ -1,0 +1,51 @@
+.footer {
+    padding:10rem 0;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: .3rem;
+    color: $color-grey-dark;
+
+    &__logo-box {
+        text-align:center;
+        margin-bottom: 8rem;
+    }
+
+    &__logo {
+        width: 30rem;
+        height: auto;
+        margin: 3.5rem;
+    }
+    
+    &__navigation {
+        border-top: .4rem solid $color-primary;
+        padding-top: 2rem;
+    }
+    
+    &__list {
+        list-style: none;
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__item {
+        margin-bottom: .7rem;
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            color: $color-grey-dark;
+            text-decoration: none;
+            display: inline-block;
+            transition: all .2s;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-primary;
+            box-shadow: 0 1rem 2rem rgba($color-black, .4);
+            transform: rotate(5deg) scale(1.3);
+        }
+    }
+}

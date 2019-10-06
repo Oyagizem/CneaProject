@@ -1,0 +1,59 @@
+
+*, 
+*::after,
+*::before {
+    margin:0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+$bp-largest: 75em;     // 1200px
+$bp-large: 68.75em;    // 1100px
+$bp-medium: 56.25em;   // 900px
+$bp-small: 37.5em;     // 600px
+$bp-smallest: 31.25em; // 500px
+
+
+
+html {
+    box-sizing: border-box;
+    font-size: 32%; 
+
+
+    @media only screen and (min-width: $bp-large) {
+        font-size: 62.5%; 
+    }
+    @media only screen and (min-width: $bp-medium) {
+        font-size: 45%; 
+    }
+}
+
+body {
+    min-height: 100vh;
+    // background-color: #fff;
+}
+
+::selection {
+    background-color: $color-primary;
+    color: $color-white;
+}
+
+
+.bootstrap-off {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+blockquote {
+    border: none;
+}
+
+img {
+    max-width: 100%;
+    display:block;
+}

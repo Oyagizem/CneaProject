@@ -1,0 +1,35 @@
+/////////////////////////
+//SEARCH
+
+.search__icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    fill:#fff;
+    /*Svg lerin altında bi boşluk oluyor. O boşluğu yoketmek için ya aşağıdaki gibi line-height: 0;
+    font-size:0; diyeceğiz ya da parent ına display:flex diyeceğiz:) */
+    line-height: 0;
+    font-size:0;
+}
+
+.search__button {
+    border:none;
+    background-color: transparent;
+}
+
+//  NOT VISIBLE for small screen  //
+.search__input {
+    display: none;
+    font-family:inherit;
+    font-size:inherit;
+    background-color: $color-grey-light;
+    border:none;
+    padding: .7rem 2rem;
+    border-radius: 100px;
+    width:90%;
+
+    &:focus {
+        outline:none;
+        width:100%;
+        background-color: navy;
+    }
+}

@@ -1,0 +1,131 @@
+.modules__formation {
+    // background-color: lightskyblue;
+    box-shadow: 0 3rem 5rem rgba($color-black,.4);
+    //box-shadow doesn't work without position:relative;
+    
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    :last-child {
+        margin-top: 0;
+    }
+
+    @media only screen and (min-width: 1200px) {
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        :last-child {
+            margin-top: 3rem;
+        }
+    }
+}
+
+.modules__center {
+    display: flex;
+    justify-content: space-around;
+}
+
+.multiselect {
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: left;
+    // padding-left: 4rem;
+    border-radius: 10rem;
+    width: 90%;
+    height: 6rem;
+    background-color: $color-white;
+    border: 2px solid $color-grey;
+    display: inline-block;
+    color: $color-grey;
+    margin-bottom: 5rem;
+    margin-top: 3rem;
+    text-align: center;
+   
+
+//     @media only screen and (min-width: $bp-medium) {
+//         font-size: 1.8rem;
+//         width: 30%;
+//     }
+}
+
+// .multiselect1 {    
+//    background-color: darkseagreen;
+// }
+
+// .multiselect2 {    
+//     background-color: darksalmon;
+// }
+
+
+/*--- Start Multiselect Dropdown Menu ---*/
+.multiselect-dropdown-menu {
+    // @media only screen and (min-width: $bp-medium) {
+    // }
+}
+  
+  .multiselect-container>li>a>label {
+    margin: 0;
+    height: 100%;
+    font-weight: 400;
+    font-size: 2rem;
+    padding: .5rem 4rem;
+}
+  
+  .caret {
+    width: .9rem;
+    height: 0;
+    border-top: .6rem solid;
+    border-right: .6rem solid transparent;
+    border-left: .6rem solid transparent;
+    color: #505050;
+    margin: 0 0 .5rem 1rem;
+}
+  
+  .dropdown-toggle::after {
+      visibility: hidden;
+}
+
+
+  /*--- End Multiselect Dropdown Menu before---*/	
+
+.btn-group {
+    max-width: 96vw !important;
+}
+
+.btn-default:hover, .btn-default:focus, .btn-default:active, .btn-default.active, .open .dropdown-toggle.btn-default {
+    color: silver;
+    background-color: #fff;
+    border-color: silver;
+}
+
+.multiselect.dropdown-toggle.btn.btn-default {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 3rem 5rem rgba($color-grey,.2);
+    // max-width: 30vw;
+}
+
+.dropdown-menu {
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 3rem 5rem rgba($color-grey,.2);
+}
+
+.open>.dropdown-menu {
+    display: flex;
+    max-width: 96vw;
+    flex-direction: column;
+    margin-top: -5rem;
+    border-radius: 2rem;
+}
+
+.checkbox {
+    // background-color: $color-primary;
+}
+
+
+.dropdown-menu>.active>a, .dropdown-menu>.active>a:hover, .dropdown-menu>.active>a:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color:$color-secondary;;
+    outline: 1;
+}

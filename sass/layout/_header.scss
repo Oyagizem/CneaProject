@@ -1,0 +1,73 @@
+.header {
+    background-image: url(../img/hero.jpg);
+    background-size: cover;
+    background-position: right;
+    margin-bottom: 5em;
+    width: auto;
+    height: 100vh;
+
+    &__logo {
+        // height: 5.5rem;
+        // width: auto;
+        vertical-align: middle;
+    }
+
+    &__navbar--logo-box {
+            position: absolute;
+            left: 3rem;
+
+        @media only screen and (min-width: $bp-medium) {
+            margin-right: 2rem;
+            position: static;
+        }
+    }
+
+    // &__navbar--hamburger {
+    //     width: 6rem;
+    //     height: 6rem;
+    //     margin-right: 3rem;
+        
+    //     display:flex;
+    //     flex-wrap: wrap;
+    //     align-items: center;
+    // }
+
+    &__text-box {
+        position:absolute;
+        top: 57%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+
+        @media only screen and (min-width: $bp-small) {
+            min-width: 70rem;
+        }
+    } 
+
+    &__topnav--right { 
+        position: absolute;
+        top: -20rem;
+        right: 11rem;
+        // display: flex;
+        flex-direction: column;
+        align-items: center;
+ 
+        @media only screen and (min-width: $bp-medium) {
+            // background-color: aqua;
+            flex-direction:row;
+            position: static;
+            top:0;
+            font-weight: 600;
+            // padding-right: 3rem;
+            // display: flex;
+            // flex-direction: row;
+            // align-items: center;
+        }
+
+        // @media only screen and (min-width: $bp-large) {
+        //     font-size: 1.5rem;
+        //     background-color: yellowgreen;
+        // }
+    }
+}
+
