@@ -1,5 +1,5 @@
 alert("External js dosyası çalışıyor.");
-debugger;
+// debugger;
 
 // START NAVBAR ANIMATION
 

@@ -13,8 +13,8 @@
     }
 
     &__navbar--logo-box {
-            position: absolute;
-            left: 3rem;
+        position: absolute;
+        left: 3rem;
 
         @media only screen and (min-width: $bp-medium) {
             margin-right: 2rem;
@@ -46,7 +46,7 @@
 
     &__topnav--right { 
         position: absolute;
-        top: -20rem;
+        top: -12em;
         right: 11rem;
         // display: flex;
         flex-direction: column;

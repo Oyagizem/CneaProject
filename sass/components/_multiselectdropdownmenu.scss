@@ -15,9 +15,9 @@
         flex-direction: row;
         justify-content: space-evenly;
 
-        :last-child {
-            margin-top: 3rem;
-        }
+        // :last-child {
+        //     margin-top: 3rem;
+        // }
     }
 }
 
@@ -63,7 +63,30 @@
     // @media only screen and (min-width: $bp-medium) {
     // }
 }
-  
+
+.multiselect-dropdown-menu input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+
+    display: inline-block;
+    vertical-align: middle;
+
+    &[type="checkbox"] {
+        border: 2px solid silver;
+        width: 15px;
+        height: 15px;
+        outline: none;
+        padding: 4px;
+        margin-right: 1.5em;
+    }
+    &[type="checkbox"]:checked {
+        background: #555;
+        background-clip: content-box;
+    }
+}
+
   .multiselect-container>li>a>label {
     margin: 0;
     height: 100%;

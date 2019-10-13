@@ -109,7 +109,7 @@ body {
 .btn {
   /*--- Start Chatbox Button Fixed ---*/ }
   .btn, .btn:link, .btn:visited {
-    font-size: 3rem;
+    font-size: 1.2em;
     position: relative;
     text-decoration: none;
     cursor: pointer;
@@ -129,13 +129,13 @@ body {
   .btn--red {
     background-color: #ff4e50;
     color: #fff;
-    padding: 1.5rem 8rem; }
+    padding: 1em 4em; }
     .btn--red::after {
       background-color: #fff; }
   .btn--white {
     background-color: #fff;
     color: #ff4e50;
-    padding: 1.5rem 8rem; }
+    padding: 1em 4em; }
     .btn--white::after {
       background-color: #ff4e50; }
     @media only screen and (min-width: 56.25em) {
@@ -155,12 +155,16 @@ body {
   .btn--secteurs {
     background-color: #fff;
     color: #ff4e50;
+    font-size: .8em;
     font-weight: 600;
     border: 0.2rem solid #ff4e50;
     width: 70%;
     padding: 1.2em; }
     .btn--secteurs::after {
       background-color: #fff; }
+    @media only screen and (min-width: 56.25em) {
+      .btn--secteurs {
+        width: 45%; } }
   .btn--temoignage-mini {
     background-color: #ff4e50;
     color: #fff;
@@ -170,10 +174,17 @@ body {
   .btn--temoignage {
     background: rgba(255, 255, 255, 0.8);
     color: #ff4e50;
+    font-size: .8em;
     font-weight: 600;
     border: 0.2rem solid #ff4e50;
     width: 70%;
     padding: 1.2em; }
+    @media only screen and (min-width: 56.25em) {
+      .btn--temoignage {
+        width: 45%; } }
+    @media only screen and (min-width: 68.75em) {
+      .btn--temoignage {
+        width: 25%; } }
   .btn--actu-mini {
     background-color: #fff;
     color: #444;
@@ -185,36 +196,43 @@ body {
   .btn--inscription {
     background-color: #ff4e50;
     color: #fff;
+    font-size: 1em;
     font-weight: 600;
     border-radius: 10rem;
     width: 70%;
-    padding: 1.2em;
+    padding: .6em;
     margin-top: 5rem; }
     .btn--inscription::after {
       background-color: #fff; }
+    @media only screen and (min-width: 56.25em) {
+      .btn--inscription {
+        width: 35%; } }
   .btn--chat {
-    font-size: 3rem;
+    font-size: .7em;
     background-color: #0080ff;
     border-color: #0080ff;
-    padding: 1.2em 4em 1.2em 4em;
+    padding: 1em 2em;
     border-radius: 2rem;
-    color: #fafafa;
-    margin: 0 auto; }
+    color: #fafafa; }
 
 .chatbox {
   position: fixed;
-  top: 90%;
-  padding: 1em; }
+  top: 92%;
+  left: 50%;
+  transform: translate(-50%); }
   .chatbox__icon {
-    position: absolute;
-    top: 35%;
-    left: 10%; }
+    float: left;
+    margin-right: .5em; }
 
 /*--- End Chatbox Button Fixed ---*/
 .social__icon {
-  width: 15%;
+  width: 10%;
   display: inline-block;
   padding: 0 .5em; }
+  @media only screen and (min-width: 68.75em) {
+    .social__icon {
+      width: 5%;
+      margin-right: 1rem; } }
 
 /*Header right navbar inscription button */
 .nav-button {
@@ -230,14 +248,18 @@ body {
   margin: 0px 20px; }
 
 .slick-slide img {
-  width: 100%; }
+  width: 70%; }
   @media only screen and (min-width: 400px) {
     .slick-slide img {
-      width: 40%;
+      width: 35%;
       margin-left: 2em; } }
-  @media only screen and (min-width: 500px) {
+  @media only screen and (min-width: 900px) {
     .slick-slide img {
-      width: 30%;
+      width: 25%;
+      margin-left: 2em; } }
+  @media only screen and (min-width: 1200px) {
+    .slick-slide img {
+      width: 15%;
       margin-left: 2em; } }
 
 .slick-prev:before,
@@ -283,8 +305,8 @@ body {
     align-items: center;
     justify-content: center; }
   .review__chat {
-    width: 7rem;
-    height: 7rem;
+    width: 3em;
+    height: 3em;
     border-radius: 50%;
     border: .8rem solid #fff;
     background-color: #ff4e50;
@@ -326,7 +348,7 @@ body {
   display: block;
   font-size: 7rem;
   position: fixed;
-  right: 1rem;
+  right: .5em;
   width: 7rem;
   color: #fff; }
   @media only screen and (min-width: 56.25em) {
@@ -367,9 +389,7 @@ body {
   @media only screen and (min-width: 1200px) {
     .modules__formation {
       flex-direction: row;
-      justify-content: space-evenly; }
-      .modules__formation :last-child {
-        margin-top: 3rem; } }
+      justify-content: space-evenly; } }
 
 .modules__center {
   display: flex;
@@ -391,6 +411,24 @@ body {
   text-align: center; }
 
 /*--- Start Multiselect Dropdown Menu ---*/
+.multiselect-dropdown-menu input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  display: inline-block;
+  vertical-align: middle; }
+  .multiselect-dropdown-menu input[type="checkbox"] {
+    border: 2px solid silver;
+    width: 15px;
+    height: 15px;
+    outline: none;
+    padding: 4px;
+    margin-right: 1.5em; }
+  .multiselect-dropdown-menu input[type="checkbox"]:checked {
+    background: #555;
+    background-clip: content-box; }
+
 .multiselect-container > li > a > label {
   margin: 0;
   height: 100%;
@@ -494,7 +532,7 @@ body {
         min-width: 70rem; } }
   .header__topnav--right {
     position: absolute;
-    top: -20rem;
+    top: -12em;
     right: 11rem;
     flex-direction: column;
     align-items: center; }
@@ -727,7 +765,7 @@ body {
   top: 5%;
   position: absolute;
   width: 80%;
-  height: 6rem;
+  height: 4em;
   z-index: 9;
   display: flex;
   justify-content: space-around;
